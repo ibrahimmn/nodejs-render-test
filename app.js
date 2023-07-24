@@ -5,15 +5,17 @@ const nodemailer = require('nodemailer');
  const path=require('path');
  const dotenv=require('dotenv'); 
  dotenv.config();
- const PORT = process.envv.PORT || 3000;
+ const PORT = process.env.PORT || 3000;
 
+
+ 
 
  const app = express();
  app.use(cors());
  app.use(bodyParser.json());
 
- const emailFrom = process.envv.EMAIL_USERNAME;
- const emailPassword = process.envv.EMAIL_PASSWORD;
+ const emailFrom = process.env.EMAIL_USERNAME;
+ const emailPassword = process.env.EMAIL_PASSWORD;
 
  const transporter = nodemailer.createTransport({
    service: 'Gmail',

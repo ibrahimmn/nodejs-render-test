@@ -55,6 +55,7 @@ const html = `
   <body>
     <section>
       Hello from bobRender!
+       Hello from bobRender!
     </section>
   </body>
 </html>

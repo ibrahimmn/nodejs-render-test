@@ -14,7 +14,7 @@ const nodemailer = require('nodemailer');
  app.use(cors());
  app.use(bodyParser.json());
 
- const emailFrom = process.env.EMAIL_USERNAME;
+ const emailto = process.env.EMAIL_USERNAME;
  const emailPassword = process.env.EMAIL_PASSWORD;
 
  const transporter = nodemailer.createTransport({
@@ -29,8 +29,8 @@ const nodemailer = require('nodemailer');
      const { name, email, message } = req.body;
 
      const mailOptions = {
-       from: emailFrom,
-       to: 'recipient@example.com',  
+       from: email,
+       to: emailto,  
        subject: 'New Contact Form Submission',
        text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
      };

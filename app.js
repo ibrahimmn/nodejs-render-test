@@ -1,4 +1,4 @@
- const express = require('express');
+const express = require('express');
 const nodemailer = require('nodemailer');
  const cors = require('cors');
  const bodyParser = require('body-parser');
@@ -25,7 +25,7 @@ const nodemailer = require('nodemailer');
    },
  });
 
- app.post('/send-email', (req, res) => {
+ app.post('/api/send-email', (req, res) => {
      const { name, email, message } = req.body;
 
      const mailOptions = {
@@ -49,9 +49,7 @@ const nodemailer = require('nodemailer');
 app.get("/", (req, res) => res.type('html').send(html));
 
 const server = app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`));
-
-server.keepAliveTimeout = 120 * 1000;
-server.headersTimeout = 120 * 1000;
+ 
 
 const html = `
 <!DOCTYPE html>

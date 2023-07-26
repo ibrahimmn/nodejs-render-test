@@ -98,7 +98,7 @@ const html = `
   </head>
   <body>
     <section>
-      Hello from bobRender!
+      Hello from bob server!
        
     </section>
   </body>
